@@ -2,6 +2,7 @@ package com.it.rpc.server.serviceImpl;
 
 import com.it.rpc.server.RPCServer;
 import com.it.rpc.thread.WorkThread;
+import provider.ServiceProvider;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -14,9 +15,9 @@ import java.util.Map;
  */
 public class SimpleRPCRPCServer implements RPCServer {
     // 存着服务接口名-> service对象的map
-    private Map<String, Object> serviceProvide;
+    private ServiceProvider serviceProvide;
 
-    public SimpleRPCRPCServer(Map<String,Object> serviceProvide){
+    public SimpleRPCRPCServer(ServiceProvider serviceProvide){
         this.serviceProvide = serviceProvide;
     }
 
